@@ -10,7 +10,11 @@ LEAP is a FiveM resource for FivePD that allows server owners to automate promot
 
 Installation is like any other FiveM resource. Extract the folder into your resources folder.
 ## Configuration
+### Client
+LEAP, on the client side, will query for a promotion every 15 minutes. This delay **IS** configurable by way of a [Convar](https://docs.fivem.net/docs/scripting-reference/convars/) - Simply add `set LEAPAutoRankDelay 15000` to your server.cfg! **The integer value is in milliseconds**, and I do not recommend that you make it anything less than 15000 (15 minutes).
 
+--- 
+### Server
 LEAP's configuration is driven by a "server-config.json" file located inside of 'LEAP/server'.
 
 Below is a short guide explaining the purpose of each section of the server-config.json file:
@@ -173,7 +177,7 @@ For your assistance:
     ]
   }
   ```
-## Example of a full configuration
+## Example Configuration
 ```json
 {
   "fivepdResourceName": "fivepd",
